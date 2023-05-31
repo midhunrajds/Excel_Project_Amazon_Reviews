@@ -120,6 +120,8 @@ At an initial look by using pivot tables and charts, most of the products receiv
 
 <img width="1440" alt="ndata" src="https://github.com/midhunrajds/Portfolio/assets/126799337/3d78af10-5df2-44e6-b8c9-79f86031a7f7">
 
+<img width="1074" alt="descriptive" src="https://github.com/midhunrajds/Portfolio/assets/126799337/8856e6dc-78b3-4f8c-bc67-35ef0168b77b">
+
 The electronics category received the maximum number of review counts and items like microSD cards under brand Sandisk stood as the top performer.
 Amazon Basics was the top reviewed brand and their top reviewed products were Cables and Misc. items and  they have received unusually large number of reviews.
 Amazon Basics was the top reviewed brand in all categories with the highest 4.5+ ratings, while boat received the maximum number of reviews in all.
@@ -131,11 +133,8 @@ Item with the highest selling price after discounts was a Sony Bravia 164 cm (65
 The histogram depicting the frequency of discount % shows us that it is slightly skewed to the right and max items reviewed were in a bracket of (55%-65%) discounts.
 
 
-###Correlation: 
+### Correlation: 
 Through correlation analysis, it was determined that there is no statistically significant correlation between the variables.
-<img width="1074" alt="descriptive" src="https://github.com/midhunrajds/Portfolio/assets/126799337/8856e6dc-78b3-4f8c-bc67-35ef0168b77b">
-
-
 
 ## Conclusion
 In conclusion, this project successfully analyzed amazon online reviews using Microsoft Excel, leveraging advanced techniques such as PivotTable, PivotChart, and Data Analysis. By investigating patterns associated with reviews and ratings, online platforms can enhance their product placing and strategies.
