@@ -4,6 +4,7 @@
 ## Abstract
 The primary intention is to get an insight into the product reviews on amazon and lookout for any interesting patterns that may help in better product placing and strategy for a potential seller. 
 
+
 ## Introduction
 The dataset used in this analysis is the data of 1K+ Amazon Product's Ratings and Reviews as per their details listed on the official website of Amazon. The dataset was obtained from Kaggle.com.
 Link to the dataset:
@@ -16,13 +17,10 @@ This allows for the sharing and adaptation of the datasets for any purpose, prov
 This dataset consists more than 1000 of real products with their identification number listed in the Amazon marketplace. Aim of the project is to gain some insights on the review and rating patterns, identify top performing segments and brands on amazon India and to identify any interesting correlations between the features.
 
 
-
 ## Purpose of the Study
 The project will help to gain knowledge on applying various techniques and tools learnt, to solve data science problems. 
 The outcome of the project will help to gain more insights into rating and review patterns. 
 On an organizational level, better placement of strategies to increase sales and optimize online experience for customers. 
-
-
 
 
 ## Project Description
@@ -37,45 +35,46 @@ The file was converted to xls for ease of use and to enable compatibility.
 <img width="1440" alt="raw" src="https://github.com/midhunrajds/Portfolio/assets/126799337/bd4a0d5f-d700-4590-8be0-7f10b4c1d46b">
 
 
-Features
-•	product_id - Product ID
-•	product_name - Name of the Product
-•	category - Category of the Product
-•	discounted_price - Discounted Price of the Product
-•	actual_price - Actual Price of the Product
-•	discount_percentage - Percentage of Discount for the Product
-•	rating - Rating of the Product
-•	rating_count - Number of people who voted for the Amazon rating
-•	about_product - Description about the Product
-•	user_id - ID of the user who wrote review for the Product
-•	user_name - Name of the user who wrote review for the Product
-•	review_id - ID of the user review
-•	review_title - Short review
-•	review_content - Long review
-•	img_link - Image Link of the Product
-•	product_link - Official Website Link of the Product
+#### Features
++ product_id - Product ID
++ product_name - Name of the Product
++ category - Category of the Product
++ discounted_price - Discounted Price of the Product
++ actual_price - Actual Price of the Product
++ discount_percentage - Percentage of Discount for the Product
++ rating - Rating of the Product
++ rating_count - Number of people who voted for the Amazon rating
++ about_product - Description about the Product
++ user_id - ID of the user who wrote review for the Product
++ user_name - Name of the user who wrote review for the Product
++ review_id - ID of the user review
++ review_title - Short review
++ review_content - Long review
++ img_link - Image Link of the Product
++ product_link - Official Website Link of the Product
 
 ## Data Cleaning Process:
 
 Features discounted_price, actual_price, discount_percentage, rating, rating_count were converted to numerical datatype for analysis purpose. Further cleaning was required as excel was not identifying the currency symbol for the prices. Data cleaning steps done on the numerical data columns:
-discounted_price – datatype converted to number. This is a ratio level data.
-actual_price – same as above.
-discount_percentage – float value between 0 and 1. 
-A new column (discount_bracket) created by converting the values to segments based on discount brackets for easier analysis. Using nested IF statements.
-Rating – Rank order data/ ordinal datatype similar to Likert scale. There was one null field. The same was replaced with the MODE of the column which was 4.1. 
-Ratings ranged from 2 to 5, 2 being lowest and 5 highest review rating received. 
-A new column (rating bracket) was created to convert the ratings into segments similar to poor, average, good and excellent. (Nested IF statements)
-Rating_count – number value, quantifiable.
++ discounted_price – datatype converted to number. This is a ratio level data.
++ actual_price – same as above.
++ discount_percentage – float value between 0 and 1. 
++ A new column (discount_bracket) created by converting the values to segments based on discount brackets for easier analysis. Using nested IF statements.
++ Rating – Rank order data/ ordinal datatype similar to Likert scale. There was one null field. The same was replaced with the MODE of the column which was 4.1. 
++ Ratings ranged from 2 to 5, 2 being lowest and 5 highest review rating received. 
++ A new column (rating bracket) was created to convert the ratings into segments similar to poor, average, good and excellent. (Nested IF statements)
++ Rating_count – number value, quantifiable.
 
 The rest of the features were categorical datatype, and for the purpose of my analysis, I will be using the below features from the remaining –
-product_id – String text. Nominal Data
-product_name – A long string with the brand name at the beginning, Used the =LEFT function to extract the brand name and placed on a new column. (brand). The brand column had some ambiguous data with same some typo errors and mismatches caused due to spacings, the same was fixed by using =PROPER and =TRIM functions, and Find & Replace functions as required. Eg: Amazonbasics and Amazon Basics were the same brand but identified as different on filters because of typo.
-category – a long string with category and subcategory separated by “|”. Used the text to column function to split the string and created new columns for category, and subcategories. As some of the newly created columns had a lot of null values and were repetitive in nature, only a category and subcategory were retained. The missing values in the subcategory were replaced with “Misc” for null values.
-The rest of the categorical features were not of much use for the exploratory purpose using excel, as they were lengthy strings with no strict datatype followed (user_id, review description etc) so they were discarded. 
++ product_id – String text. Nominal Data
++ product_name – A long string with the brand name at the beginning, Used the =LEFT function to extract the brand name and placed on a new column. (brand). The brand column had some ambiguous data with same some typo errors and mismatches caused due to spacings, the same was fixed by using =PROPER and =TRIM functions, and Find & Replace functions as required. Eg: Amazonbasics and Amazon Basics were the same brand but identified as different on filters because of typo.
++ category – a long string with category and subcategory separated by “|”. Used the text to column function to split the string and created new columns for category, and subcategories. As some of the newly created columns had a lot of null values and were repetitive in nature, only a category and subcategory were retained. The missing values in the subcategory were replaced with “Misc” for null values.
++ The rest of the categorical features were not of much use for the exploratory purpose using excel, as they were lengthy strings with no strict datatype followed (user_id, review description etc) so they were discarded. 
 
 <img width="1440" alt="working" src="https://github.com/midhunrajds/Portfolio/assets/126799337/ed3a3dda-1ced-4cdf-9d79-83da680efcb2">
 
 ## Exploratory Data Analysis:
+
 
 ### Manage missing data and outliers:
 There was one null field in rating. The same was replaced with the MODE of the column which was 4.1. 
@@ -87,7 +86,9 @@ The cleaned dataset was converted to a table, and pivot tables were inserted to 
 
 <img width="959" alt="pivot" src="https://github.com/midhunrajds/Portfolio/assets/126799337/cd0c34a6-25e3-4d13-a449-6d9fbe5f109c">
 
+
 ### Validation
+
 During the data validation phase of the Excel project, checks were done to ensure the accuracy, completeness, and consistency of the dataset. 
 
 Examined the data to confirm that each value was assigned to the correct data type (e.g., numeric, text etc) and fell within the expected range of values. Any anomalies or inconsistencies in data typing and ranges were corrected.
@@ -99,15 +100,10 @@ Finally, a vital aspect of the data validation process involved checking for the
 
 By executing these comprehensive data validation measures, the project ensured that the dataset was free from abnormalities, maintained consistent formatting, and contained no missing values. This robust validation process bolstered the reliability and accuracy of the data, laying the foundation for accurate analysis and informed decision-making.
 
+
 ## Visualization
 
 The data visualization stage of the Excel project involved transforming the analyzed information into meaningful and easily understandable visual representations. This allowed for a comprehensive overview of the modeled data on a dedicated dashboard, enhancing the viewer's ability to gain insights efficiently. Several key steps were taken to achieve this goal.
-
-To begin, a new Excel sheet was created specifically for the purpose of visualizing the data. This dedicated sheet served as the canvas for assembling various charts, tables, and visual elements, consolidating all the modeled information in a single, easily accessible location. This approach ensured that viewers could review the data at a glance, enabling a holistic understanding of the analysis outcomes.
-
-To enhance interactivity and provide viewers with more control over the data exploration process, slicers were incorporated into the dashboard. Slicers function as interactive filters that allow for further data segmentation based on different criteria and the specific interests of the viewer. By utilizing slicers, viewers can dynamically adjust the displayed data, focusing on specific subsets or dimensions of the analysis that are most relevant to their investigation.
-
-These features collectively contribute to a more intuitive and user-friendly data visualization experience. By presenting the analyzed information on a dedicated dashboard, viewers can quickly grasp the key insights and trends without feeling overwhelmed by the complexity of the underlying data. The inclusion of slicers adds an extra layer of interactivity, enabling viewers to explore the data from different angles and refine their analysis based on specific filters of interest.
 
 Through this data visualization process, the Excel project successfully addresses the initial research question regarding car insurance claim fraud. The consolidated dashboard and interactive slicers empower viewers to effortlessly navigate through the modeled data, facilitating a comprehensive understanding of the analysis outcomes while ensuring a streamlined and engaging data exploration experience.
 
@@ -115,22 +111,27 @@ Through this data visualization process, the Excel project successfully addresse
 
 ## Analysis
 
-Using the modelled data in the dashboard, I was able to answer the initial questions and provide insights on amazon online reviews.
-At an initial look by using pivot tables and charts, most of the products received positive reviews. Around 6% of the products were rated excellent (4.5+), and 82% reviews were rated good (4.0-4.5), while 12% reviews were in the bracket (2.5-3.9). However when a descriptive analysis was done using the tool, we could see that the rating counts were skewed to the left while ratings were skewed to the right, which meant a few items received unusually large number of positive reviews ( >400,000). These few outliers have influenced the rating.
++ Using the modelled data in the dashboard, I was able to answer the initial questions and provide insights on amazon online reviews.
+At an initial look by using pivot tables and charts, most of the products received positive reviews. Around 6% of the products were rated excellent (4.5+), and 82% reviews were rated good (4.0-4.5), while 12% reviews were in the bracket (2.5-3.9). 
 
-<img width="1440" alt="ndata" src="https://github.com/midhunrajds/Portfolio/assets/126799337/3d78af10-5df2-44e6-b8c9-79f86031a7f7">
++ The electronics category received the maximum number of review counts and items like microSD cards under brand Sandisk stood as the top performer.
++ Item with the highest selling price after discounts was a Sony Bravia 164 cm (65 inches) selling at Rs 77,990.00.
+Amazon Basics was the top reviewed brand and their top reviewed products were Cables and Misc. items and  they have received unusually large number of reviews.
++ Amazon Basics was the top reviewed brand in all categories with the highest 4.5+ ratings, while boat received the maximum number of reviews in all.
+
++ However when a descriptive analysis was done using the tool, we could see that the rating counts were skewed to the left while ratings were skewed to the right, which meant a few items received unusually large number of positive reviews ( >400,000). These few outliers have influenced the rating.
 
 <img width="1074" alt="descriptive" src="https://github.com/midhunrajds/Portfolio/assets/126799337/8856e6dc-78b3-4f8c-bc67-35ef0168b77b">
 
-The electronics category received the maximum number of review counts and items like microSD cards under brand Sandisk stood as the top performer.
-Amazon Basics was the top reviewed brand and their top reviewed products were Cables and Misc. items and  they have received unusually large number of reviews.
-Amazon Basics was the top reviewed brand in all categories with the highest 4.5+ ratings, while boat received the maximum number of reviews in all.
+
+<img width="1440" alt="ndata" src="https://github.com/midhunrajds/Portfolio/assets/126799337/3d78af10-5df2-44e6-b8c9-79f86031a7f7">
+
 
 <img width="1440" alt="scatterplot" src="https://github.com/midhunrajds/Portfolio/assets/126799337/0044948b-652c-4d1c-87b9-99a89337acae">
 
-A scatterplot chart plotted with discounted price vs rating counts hints that the selling price is influenced by the rating counts. 
-Item with the highest selling price after discounts was a Sony Bravia 164 cm (65 inches) selling at Rs 77,990.00.
-The histogram depicting the frequency of discount % shows us that it is slightly skewed to the right and max items reviewed were in a bracket of (55%-65%) discounts.
++ A scatterplot chart plotted with discounted price vs rating counts hints that the selling price is influenced by the rating counts. 
+
++ The histogram depicting the frequency of discount % shows us that it is slightly skewed to the right and max items reviewed were in a bracket of (55%-65%) discounts.
 
 
 ### Correlation: 
