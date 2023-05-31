@@ -34,7 +34,7 @@ Most of the attributes are relevant to the analysis.
 Dataset has 1465 sessions and 16 columns in the original csv format.
 The file was converted to xls for ease of use and to enable compatibility.
 
-![original csv file](/assets/images/raw.png)
+![original csv file](/Portfolio/Excel Project - Amazon Reviews/images/raw.png)
 
 
 Features
