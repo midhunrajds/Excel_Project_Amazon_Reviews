@@ -34,7 +34,7 @@ Most of the attributes are relevant to the analysis.
 Dataset has 1465 sessions and 16 columns in the original csv format.
 The file was converted to xls for ease of use and to enable compatibility.
 
-![original csv file](/Portfolio/Excel Project - Amazon Reviews/images/raw.png)
+<img width="1440" alt="raw" src="https://github.com/midhunrajds/Portfolio/assets/126799337/bd4a0d5f-d700-4590-8be0-7f10b4c1d46b">
 
 
 Features
@@ -73,6 +73,8 @@ product_name – A long string with the brand name at the beginning, Used the =L
 category – a long string with category and subcategory separated by “|”. Used the text to column function to split the string and created new columns for category, and subcategories. As some of the newly created columns had a lot of null values and were repetitive in nature, only a category and subcategory were retained. The missing values in the subcategory were replaced with “Misc” for null values.
 The rest of the categorical features were not of much use for the exploratory purpose using excel, as they were lengthy strings with no strict datatype followed (user_id, review description etc) so they were discarded. 
 
+<img width="1440" alt="working" src="https://github.com/midhunrajds/Portfolio/assets/126799337/ed3a3dda-1ced-4cdf-9d79-83da680efcb2">
+
 ## Exploratory Data Analysis:
 
 ### Manage missing data and outliers:
@@ -82,6 +84,8 @@ Data normalization can be done for these numbers using z_score or max-min normal
 
 ### Key insights visualizations:
 The cleaned dataset was converted to a table, and pivot tables were inserted to explore relations and create graphs and 2-D stacked columns.
+
+<img width="959" alt="pivot" src="https://github.com/midhunrajds/Portfolio/assets/126799337/cd0c34a6-25e3-4d13-a449-6d9fbe5f109c">
 
 ### Validation
 During the data validation phase of the Excel project, checks were done to ensure the accuracy, completeness, and consistency of the dataset. 
@@ -107,12 +111,20 @@ These features collectively contribute to a more intuitive and user-friendly dat
 
 Through this data visualization process, the Excel project successfully addresses the initial research question regarding car insurance claim fraud. The consolidated dashboard and interactive slicers empower viewers to effortlessly navigate through the modeled data, facilitating a comprehensive understanding of the analysis outcomes while ensuring a streamlined and engaging data exploration experience.
 
+<img width="1434" alt="dashboard" src="https://github.com/midhunrajds/Portfolio/assets/126799337/277c2b30-f015-45df-9818-c9197b528516">
+
 ## Analysis
+
 Using the modelled data in the dashboard, I was able to answer the initial questions and provide insights on amazon online reviews.
 At an initial look by using pivot tables and charts, most of the products received positive reviews. Around 6% of the products were rated excellent (4.5+), and 82% reviews were rated good (4.0-4.5), while 12% reviews were in the bracket (2.5-3.9). However when a descriptive analysis was done using the tool, we could see that the rating counts were skewed to the left while ratings were skewed to the right, which meant a few items received unusually large number of positive reviews ( >400,000). These few outliers have influenced the rating.
+
+<img width="1440" alt="ndata" src="https://github.com/midhunrajds/Portfolio/assets/126799337/3d78af10-5df2-44e6-b8c9-79f86031a7f7">
+
 The electronics category received the maximum number of review counts and items like microSD cards under brand Sandisk stood as the top performer.
 Amazon Basics was the top reviewed brand and their top reviewed products were Cables and Misc. items and  they have received unusually large number of reviews.
 Amazon Basics was the top reviewed brand in all categories with the highest 4.5+ ratings, while boat received the maximum number of reviews in all.
+
+<img width="1440" alt="scatterplot" src="https://github.com/midhunrajds/Portfolio/assets/126799337/0044948b-652c-4d1c-87b9-99a89337acae">
 
 A scatterplot chart plotted with discounted price vs rating counts hints that the selling price is influenced by the rating counts. 
 Item with the highest selling price after discounts was a Sony Bravia 164 cm (65 inches) selling at Rs 77,990.00.
@@ -121,6 +133,7 @@ The histogram depicting the frequency of discount % shows us that it is slightly
 
 ###Correlation: 
 Through correlation analysis, it was determined that there is no statistically significant correlation between the variables.
+<img width="1074" alt="descriptive" src="https://github.com/midhunrajds/Portfolio/assets/126799337/8856e6dc-78b3-4f8c-bc67-35ef0168b77b">
 
 
 
