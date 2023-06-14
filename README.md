@@ -1,85 +1,73 @@
-
 # Data Analysis Project using Excel – Amazon Reviews India
+[![Microsoft Excel Badge](https://img.shields.io/badge/Microsoft%20Excel-217346?style=flat&logo=microsoftexcel)](https://www.microsoft.com/en-us/microsoft-365/excel)
+[![PivotTable Badge](https://img.shields.io/badge/PivotTable-FFB200?style=flat&logo=microsoftexcel)](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576)
+[![PivotChart Badge](https://img.shields.io/badge/PivotChart-FFB200?style=flat&logo=microsoftexcel)](https://support.microsoft.com/en-us/office/create-a-pivotchart-cb1f7c2c-5626-43b7-8e4a-87ecf35a9cac)
+[![Data Analysis Badge](https://img.shields.io/badge/Data%20Analysis-FF7F50?style=flat)](https://en.wikipedia.org/wiki/Data_analysis)
 
-<img width="1434" alt="dashboard" src="https://github.com/midhunrajds/Excel_Project_Amazon_Reviews/assets/126799337/3f088b0f-695f-4c41-b383-3d37bea625cc">
+![dashboard](https://github.com/midhunrajds/Excel_Project_Amazon_Reviews/assets/126799337/3f088b0f-695f-4c41-b383-3d37bea625cc)
 
 ## Abstract
-The primary intention is to get an insight into the product reviews on amazon and lookout for any interesting patterns that may help in better product placing and strategy for a potential seller. 
-
+The primary intention is to gain insight into the product reviews on Amazon and look out for any interesting patterns that may help in better product placement and strategy for potential sellers.
 
 ## Introduction
-The dataset used in this analysis is the data of 1K+ Amazon Product's Ratings and Reviews as per their details listed on the official website of Amazon. The dataset was obtained from Kaggle.com.
-Link to the dataset:
-https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
-This dataset is licensed under a Creative Commons Attribution 4.0 International (CC BY-NC-SA 4.0) license.
-This allows for the sharing and adaptation of the datasets for any purpose, provided that the appropriate credit is given.
+The dataset used in this analysis contains the data of 1K+ Amazon products' ratings and reviews as per their details listed on the official website of Amazon. The dataset was obtained from [Kaggle.com](https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset). This dataset is licensed under a Creative Commons Attribution 4.0 International (CC BY-NC-SA 4.0) license, allowing for the sharing and adaptation of the datasets for any purpose, provided that the appropriate credit is given.
 
-
-## Context/ Problem
-This dataset consists more than 1000 of real products with their identification number listed in the Amazon marketplace. Aim of the project is to gain some insights on the review and rating patterns, identify top performing segments and brands on amazon India and to identify any interesting correlations between the features.
-
+## Context/Problem
+This dataset consists of more than 1000 real products with their identification numbers listed in the Amazon marketplace. The aim of the project is to gain insights into the review and rating patterns, identify top-performing segments and brands on Amazon India, and identify any interesting correlations between the features.
 
 ## Purpose of the Study
-The project will help to gain knowledge on applying various techniques and tools learnt, to solve data science problems. 
-The outcome of the project will help to gain more insights into rating and review patterns. 
-On an organizational level, better placement of strategies to increase sales and optimize online experience for customers. 
-
+The project aims to apply various techniques and tools learned in data science to solve problems. The outcome of the project will provide insights into rating and review patterns. On an organizational level, it can help in better placement of strategies to increase sales and optimize the online experience for customers.
 
 ## Project Description
+Various data analytics techniques are applied to explore the data. The CRISP-DM process is followed to ensure a proper methodology. The data preparation involves fixing issues such as missing values and disorganization using appropriate methods like imputation and removal. Most of the attributes are relevant to the analysis. The dataset has 1465 sessions and 16 columns in the original CSV format. The file was converted to XLS for ease of use and compatibility.
 
-Various data analytics techniques is applied to explore the data. 
-Followed the CRISP-DM process to ensure proper methodology. 
-Data Preparation: This raw dataset has missing values and is highly unorganized. I intend to fix the issues by using appropriate methods like imputation and removal. 
-Most of the attributes are relevant to the analysis.
-Dataset has 1465 sessions and 16 columns in the original csv format.
-The file was converted to xls for ease of use and to enable compatibility.
-<img width="1440" alt="raw" src="https://github.com/midhunrajds/Excel_Project_Amazon_Reviews/assets/126799337/d2b866cc-ce7d-4f69-bafd-c5cd86f6da84">
+![raw](https://github.com/midhunrajds/Excel_Project_Amazon_Reviews/assets/126799337/d2b866cc-ce7d-4f69-bafd-c5cd86f6da84)
 
-
-#### Features
-+ product_id - Product ID
-+ product_name - Name of the Product
-+ category - Category of the Product
-+ discounted_price - Discounted Price of the Product
-+ actual_price - Actual Price of the Product
-+ discount_percentage - Percentage of Discount for the Product
-+ rating - Rating of the Product
-+ rating_count - Number of people who voted for the Amazon rating
-+ about_product - Description about the Product
-+ user_id - ID of the user who wrote review for the Product
-+ user_name - Name of the user who wrote review for the Product
-+ review_id - ID of the user review
-+ review_title - Short review
-+ review_content - Long review
-+ img_link - Image Link of the Product
-+ product_link - Official Website Link of the Product
+### Features
+- product_id - Product ID
+- product_name - Name of the Product
+- category - Category of the Product
+- discounted_price - Discounted Price of the Product
+- actual_price - Actual Price of the Product
+- discount_percentage - Percentage of Discount for the Product
+- rating - Rating of the Product
+- rating_count - Number of people who voted for the Amazon rating
+- about_product - Description about the Product
+- user_id - ID of the user who wrote a review for the Product
+- user_name - Name of the user who wrote a review for the Product
+- review_id - ID of the user review
+- review_title - Short review
+- review_content - Long review
+- img_link - Image Link of the Product
+- product_link - Official Website Link of the Product
 
 ## Data Cleaning Process:
 
-Features discounted_price, actual_price, discount_percentage, rating, rating_count were converted to numerical datatype for analysis purpose. Further cleaning was required as excel was not identifying the currency symbol for the prices. Data cleaning steps done on the numerical data columns:
-+ discounted_price – datatype converted to number. This is a ratio level data.
-+ actual_price – same as above.
-+ discount_percentage – float value between 0 and 1. 
-+ A new column (discount_bracket) created by converting the values to segments based on discount brackets for easier analysis. Using nested IF statements.
-+ Rating – Rank order data/ ordinal datatype similar to Likert scale. There was one null field. The same was replaced with the MODE of the column which was 4.1. 
-+ Ratings ranged from 2 to 5, 2 being lowest and 5 highest review rating received. 
-+ A new column (rating bracket) was created to convert the ratings into segments similar to poor, average, good and excellent. (Nested IF statements)
-+ Rating_count – number value, quantifiable.
+Features `discounted_price`, `actual_price`, `discount_percentage`, `rating`, and `rating_count` were converted to numerical datatype for analysis purposes. Further cleaning was required as Excel was not identifying the currency symbol for the prices. Data cleaning steps done on the numerical data columns:
+- `discounted_price` – datatype converted to number. This is a ratio level data.
+- `actual_price` – same as above.
+- `discount_percentage` – float value between 0 and 1.
+- A new column (`discount_bracket`) was created by converting the values to segments based on discount brackets for easier analysis using nested IF statements.
+- `Rating` – Rank order data/ordinal datatype similar to Likert scale. There was one null field. The same was replaced with the MODE of the column, which was 4.1.
+- Ratings ranged from 2 to 5, with 2 being the lowest and 5 being the highest review rating received.
+- A new column (`rating_bracket`) was created to convert the ratings into segments similar to poor, average, good, and excellent using nested IF statements.
+- `rating_count` – number value, quantifiable.
 
-The rest of the features were categorical datatype, and for the purpose of my analysis, I will be using the below features from the remaining –
-+ product_id – String text. Nominal Data
-+ product_name – A long string with the brand name at the beginning, Used the =LEFT function to extract the brand name and placed on a new column. (brand). The brand column had some ambiguous data with same some typo errors and mismatches caused due to spacings, the same was fixed by using =PROPER and =TRIM functions, and Find & Replace functions as required. Eg: Amazonbasics and Amazon Basics were the same brand but identified as different on filters because of typo.
-+ category – a long string with category and subcategory separated by “|”. Used the text to column function to split the string and created new columns for category, and subcategories. As some of the newly created columns had a lot of null values and were repetitive in nature, only a category and subcategory were retained. The missing values in the subcategory were replaced with “Misc” for null values.
-+ The rest of the categorical features were not of much use for the exploratory purpose using excel, as they were lengthy strings with no strict datatype followed (user_id, review description etc) so they were discarded. 
-<img width="1440" alt="working" src="https://github.com/midhunrajds/Excel_Project_Amazon_Reviews/assets/126799337/d23b4ca9-b3a5-4a59-afd6-2a30893a8b61">
+The rest of the features were categorical datatype, and for the purpose of my analysis, I will be using the below features from the remaining:
+- `product_id` – String text. Nominal Data.
+- `product_name` – A long string with the brand name at the beginning. Used the `=LEFT` function to extract the brand name and placed it in a new column (`brand`). The brand column had some ambiguous data with typos and mismatches caused due to spacings. These were fixed using the `=PROPER` and `=TRIM` functions, as well as the Find & Replace function as required. For example, "Amazonbasics" and "Amazon Basics" were the same brand but identified as different due to typos.
+- `category` – a long string with category and subcategory separated by "|". Used the text-to-columns function to split the string and create new columns for category and subcategories. As some of the newly created columns had many null values and were repetitive in nature, only the category and subcategory columns were retained. The missing values in the subcategory column were replaced with "Misc" for null values.
+- The rest of the categorical features were not useful for the exploratory purpose using Excel, as they were lengthy strings with no strict datatype followed (user_id, review description, etc.), so they were discarded.
+
+![working](https://github.com/midhunrajds/Excel_Project_Amazon_Reviews/assets/126799337/d23b4ca9-b3a5-4a59-afd6-2a30893a8b61)
 
 ## Exploratory Data Analysis:
 
-
 ### Manage missing data and outliers:
-There was one null field in rating. The same was replaced with the MODE of the column which was 4.1. 
-Unusually large review counts were found for some products but they would probably be not an error but can be considered as an outlier as they were for products sold directly by Amazon basics. 
-Data normalization can be done for these numbers using z_score or max-min normalization if required. 
+There was one null field in the `rating` column. The same was replaced with the MODE of the column, which was 4.1.
+Unusually large review counts were found for some products, but they would probably be considered outliers as they were for products sold directly by Amazon Basics.
+Data normalization can be done for these numbers using z-score or min-max normalization if required.
+
 
 ### Key insights visualizations:
 The cleaned dataset was converted to a table, and pivot tables were inserted to explore relations and create graphs and 2-D stacked columns.
