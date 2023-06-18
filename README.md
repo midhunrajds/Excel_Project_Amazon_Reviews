@@ -11,13 +11,13 @@
 
 - [Abstract](#abstract)
 - [Introduction](#introduction)
-- [Context/Problem](#Context/Problem)
-- [Purpose of the Study](#Purpose%20of%20the%20Study)
-- [Project Description](#Project%20Description)
+- [Context/Problem](#context/problem)
+- [Purpose of the Study](#purpose%20of%20the%20study)
+- [Project Description](#project%20description)
 - [Features](#features)
-- [Data Cleaning Process](#Data%20Cleaning%20Process)
-- [Exploratory Data Analysis](#Exploratory%20Data%20Analysis)
-- [Conclusion](#Conclusion)
+- [Data Cleaning Process](#data%20cleaning%20process)
+- [Exploratory Data Analysis](#exploratory%20data%20analysis)
+- [Conclusion](#conclusion)
 - [License](#license)
 
 ## Abstract
