@@ -6,6 +6,20 @@
 
 ![dashboard](https://github.com/midhunrajds/Excel_Project_Amazon_Reviews/assets/126799337/3f088b0f-695f-4c41-b383-3d37bea625cc)
 
+<a name="top"></a>
+# Index
+
+- [Abstract](#abstract)
+- [Introduction](#introduction)
+- [Context/Problem](#Context/Problem)
+- [Purpose of the Study](#Purpose%20of%20the%20Study)
+- [Project Description](#Project%20Description)
+- [Features](#features)
+- [Data Cleaning Process](#Data%20Cleaning%20Process)
+- [Exploratory Data Analysis](#Exploratory%20Data%20Analysis)
+- [Conclusion](#Conclusion)
+- [License](#license)
+
 ## Abstract
 The primary intention is to gain insight into the product reviews on Amazon and look out for any interesting patterns that may help in better product placement and strategy for potential sellers.
 
@@ -97,6 +111,8 @@ Through this data visualization process, the Excel project successfully addresse
 
 <img width="1434" alt="dashboard" src="https://github.com/midhunrajds/Excel_Project_Amazon_Reviews/assets/126799337/3f088b0f-695f-4c41-b383-3d37bea625cc">
 
+[Go back to top](#top)
+
 ## Analysis
 
 + Using the modelled data in the dashboard, I was able to answer the initial questions and provide insights on amazon online reviews.
@@ -126,7 +142,7 @@ It was inferred that no significant correlation existed between the discounted p
 Amazon seems to be a good platform to sell misc. electronic and computer accessories for a potential seller as can be seen from the plotted graphs. 
 However one has to be cautious about unusually large volumes of ratings done for a not so significant product. They could be fake reviews but further analysis with more viable data is required to confirm. 
 
-
+[Go back to top](#top)
 
 
 
